@@ -3,10 +3,10 @@ from os import environ
 import pygame as pg
 from pygame.locals import *
 
-from Const import *
-from Map import Map
-from MenuManager import MenuManager
-from Sound import Sound
+from .Const import *
+from .Map import Map
+from .MenuManager import MenuManager
+from .Sound import Sound
 
 from Next.Const import WINDOW_W, WINDOW_H
 
@@ -21,7 +21,7 @@ class Core(object):
         environ['#'] = '1'
         pg.mixer.pre_init(44100, -16, 2, 1024)
         pg.init()
-        pg.display.set_caption('Mario by techprogrammer007')
+        pg.display.set_caption('Mario by Murtaza')
         pg.display.set_caption('@code_with_python_')
         pg.display.set_mode((WINDOW_W, WINDOW_H))
 
@@ -65,7 +65,7 @@ class Core(object):
                     self.keyL = True
                 elif e.key == K_DOWN:
                     self.keyD = True
-                elif e.key == K_UP:
+                elif e.key in [K_UP, K_SPACE]:
                     self.keyU = True
                 elif e.key == K_LSHIFT:
                     self.keyShift = True
@@ -77,7 +77,7 @@ class Core(object):
                     self.keyL = False
                 elif e.key == K_DOWN:
                     self.keyD = False
-                elif e.key == K_UP:
+                elif e.key in [K_UP, K_SPACE]:
                     self.keyU = False
                 elif e.key == K_LSHIFT:
                     self.keyShift = False

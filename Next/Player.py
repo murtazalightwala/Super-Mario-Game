@@ -1,6 +1,6 @@
 import pygame as pg
 
-from Const import *
+from .Const import *
 
 
 class Player(object):
@@ -32,7 +32,7 @@ class Player(object):
         
         self.pos_x = x_pos
 
-        self.image = pg.image.load('images/mario/mario.png').convert_alpha()
+        self.image = pg.image.load('Next/images/Mario/mario.png').convert_alpha()
         self.sprites = []
         self.load_sprites()
 

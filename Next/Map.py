@@ -1,23 +1,23 @@
 import pygame as pg
 from pytmx.util_pygame import load_pygame
 
-from GameUI import GameUI
-from BGObject import BGObject
-from Camera import Camera
-from Event import Event
-from Flag import Flag
-from Const import *
-from Platform import Platform
-from Player import Player
-from Goombas import Goombas
-from Mushroom import Mushroom
-from Flower import Flower
-from Koopa import Koopa
-from Tube import Tube
-from PlatformDebris import PlatformDebris
-from CoinDebris import CoinDebris
-from Fireball import Fireball
-from Text import Text
+from .GameUI import GameUI
+from .BGObject import BGObject
+from .Camera import Camera
+from .Event import Event
+from .Flag import Flag
+from .Const import *
+from .Platform import Platform
+from .Player import Player
+from .Goombas import Goombas
+from .Mushroom import Mushroom
+from .Flower import Flower
+from .Koopa import Koopa
+from .Tube import Tube
+from .PlatformDebris import PlatformDebris
+from .CoinDebris import CoinDebris
+from .Fireball import Fireball
+from .Text import Text
 
 
 class Map(object):
@@ -60,7 +60,7 @@ class Map(object):
         self.oGameUI = GameUI()
 
     def loadWorld_11(self):
-        tmx_data = load_pygame("worlds/1-1/W11.tmx")
+        tmx_data = load_pygame("Next/worlds/1-1/W11.tmx")
         self.mapSize = (tmx_data.width, tmx_data.height)
 
         self.sky = pg.Surface((WINDOW_W, WINDOW_H))

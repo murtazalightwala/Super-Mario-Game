@@ -1,5 +1,5 @@
 import pygame as pg
-from Const import *
+from .Const import *
 
 
 class Entity(object):
